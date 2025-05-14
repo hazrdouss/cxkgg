@@ -1,0 +1,14 @@
+---
+// layout imports
+import Head from "../layouts/MainHead.astro";
+const { bodyClasses, mainClasses, title, description } = Astro.props;
+---
+
+<html data-theme="dark" lang="en">
+<Head {title} />
+<body class="relative bg-zinc-900 selection:bg-zinc-200/20" class:list={[bodyClasses]}>
+   <main>
+       <slot/>
+   </main>
+</body>
+</html>
